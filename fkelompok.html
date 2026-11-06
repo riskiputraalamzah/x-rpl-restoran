@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Makanan</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #fff8f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .form-card {
+            background-color: #ffffff;
+            width: 100%;
+            max-width: 420px;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            border-top: 5px solid #e63946;
+        }
+
+        .form-card h2 {
+            text-align: center;
+            color: #1d3557;
+            margin-bottom: 20px;
+        }
+
+        .input-group {
+            margin-bottom: 16px;
+        }
+
+        .input-group label {
+            display: block;
+            margin-bottom: 6px;
+            color: #457b9d;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .input-group input,
+        .input-group select,
+        .input-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #cccccc;
+            border-radius: 6px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .input-group input:focus,
+        .input-group select:focus,
+        .input-group textarea:focus {
+            border-color: #e63946;
+        }
+
+        /* Styling Pilihan Menu (Checkbox) */
+        .menu-options {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        .menu-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #f1faee;
+            padding: 8px 12px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .menu-item label {
+            margin-bottom: 0;
+            color: #1d3557;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: #e63946;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 12px;
+            background-color: #e63946;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .btn-submit:hover {
+            background-color: #c1121f;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-card">
+        <h2>Pesan Makanan</h2>
+        <form action="#" method="POST">
+            
+            <!-- Nama Pemesan -->
+            <div class="input-group">
+                <label for="nama">Nama Pemesan</label>
+                <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required>
+            </div>
+
+            <!-- Nomor Meja / Alamat -->
+            <div class="input-group">
+                <label for="meja">Nomor Meja</label>
+                <input type="number" id="meja" name="meja" placeholder="Contoh: 05" required>
+            </div>
+
+            <!-- Pilih Menu Makanan -->
+            <div class="input-group">
+                <label>Pilih Makanan</label>
+                <div class="menu-options">
+                    <div class="menu-item">
+                        <label><input type="checkbox" name="menu[]" value="Nasi Goreng"> Nasi Goreng Special</label>
+                        <span class="price">Rp 25.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" name="menu[]" value="Mie Ayam"> Mie Ayam Bakso</label>
+                        <span class="price">Rp 20.000</span>
+                    </div>
+                    <div class="menu-item">
+                        <label><input type="checkbox" name="menu[]" value="Ayam Bakar"> Paket Ayam Bakar</label>
+                        <span class="price">Rp 30.000</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pilih Minuman -->
+            <div class="input-group">
+                <label for="minuman">Pilih Minuman</label>
+                <select id="minuman" name="minuman">
+                    <option value="">-- Tanpa Minuman --</option>
+                    <option value="Es Teh">Es Teh Manis (Rp 5.000)</option>
+                    <option value="Es Jeruk">Es Jeruk (Rp 7.000)</option>
+                    <option value="Air Mineral">Air Mineral (Rp 4.000)</option>
+                </select>
+            </div>
+
+            <!-- Catatan Pesanan -->
+            <div class="input-group">
+                <label for="catatan">Catatan Tambahan</label>
+                <textarea id="catatan" name="catatan" rows="3" placeholder="Contoh: Pedas, tanpa bawang goreng..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-submit">Pesan Sekarang</button>
+
+        </form>
+    </div>
+
+</body>
+</html>
