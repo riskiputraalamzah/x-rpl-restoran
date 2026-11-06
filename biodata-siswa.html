@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biodata Siswa</title>
+  <style>
+    :root {
+      --kertas: #f3f6fa;
+      --kartu: #ffffff;
+      --pink: #fc00b1;
+      --biru-muda: #dce6f5;
+      --teks: #f700ff;
+      --pink-cerah: #f0a1e7;
+      --garis: #d3dbe8;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--kertas);
+      color: var(--teks);
+      line-height: 1.6;
+      padding: 32px 16px;
+    }
+
+    .kartu {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--kartu);
+      border: 1px solid var(--garis);
+      border-radius: 14px;
+      overflow: hidden;
+    }
+
+    /* Bagian kepala: foto dan identitas utama */
+    header {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      padding: 32px;
+      background: var(--pink);
+      color: #fff;
+    }
+
+    .foto {
+      flex: none;
+      width: 200px;
+      height: 230px;
+      border-radius: 8px;
+      border: 3px solid #fff;
+      background: var(--biru-muda);
+      color: var(--pink);
+      display: grid;
+      place-items: center;
+      font-size: 0.85rem;
+      text-align: center;
+      object-fit: cover;
+    }
+
+    header h1 { font-size: 1.8rem; line-height: 1.2; }
+    header p { margin-top: 6px; opacity: 0.85; }
+
+    main { padding: 8px 32px 32px; }
+
+    section { margin-top: 24px; }
+
+    h2 {
+      font-size: 1.1rem;
+      color: var(--pink);
+      padding-bottom: 6px;
+      border-bottom: 2px solid var(--biru-muda);
+      margin-bottom: 8px;
+      text-align: center;
+    }
+
+    table { width: 100%; border-collapse: collapse; }
+
+    th, td {
+      text-align: left;
+      padding: 9px 4px;
+      border-bottom: 1px solid var(--garis);
+      vertical-align: top;
+    }
+
+    th { width: 38%; font-weight: 600; color: var(--pink-cerah); }
+
+    footer {
+      padding: 16px 32px;
+      background: var(--kertas);
+      border-top: 1px solid var(--garis);
+      font-size: 0.85rem;
+      color: var(--pink-cerah);
+    }
+
+    /* Tampilan ponsel */
+    @media (max-width: 560px) {
+      header { flex-direction: column; text-align: center; padding: 24px 16px; }
+      main { padding: 8px 16px 24px; }
+      th { width: 45%; }
+    }
+
+    /* Tampilan cetak */
+    @media print {
+      body { background: #fff; padding: 0; }
+      .kartu { border: none; }
+    }
+  </style>
+</head>
+<body>
+  <article class="kartu">
+    <header>
+      <div><img class="foto" src="WhatsApp Image 2026-10-08 at 11.46.55.jpeg" alt="Foto Kelompok"></div>
+      <div>
+        <h1>Kelompok 4</h1>
+        <p>Kelas X RPL</p>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <h2>Data Sekolah</h2>
+        <table>
+          <tr><th>Asal sekolah</th><td>SMK Antartika 1 Sidoarjo</td></tr>
+          <tr><th>Alamat</th><td>Siwalanpanji</td></tr>
+          <tr><th>Nomor Pokok Sekolah Nasional (NPSN)</th><td>20501717</td></tr>
+          <tr><th>Tahun masuk</th><td>2026</td></tr>
+          <tr><th>Ekstrakurikuler</th><td>Software Engineer</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2>Data Kelompok</h2>
+        <table>
+          <tr><th>Nama Kelompok</th><td>Susan, Haris, Rahmat, Ilham, Yourico</td></tr>
+          <tr><th>Kelas</th><td>X RPL</td></tr>
+          <tr><th>Tanggal Pembuatan</th><td>08 Oktober 2026</td></tr>
+        </table>
+      </section>
+
+    </main>
+
+    <footer>Data terakhir diperbarui: Oktober 2026</footer>
+  </article>
+</body>
+</html>
