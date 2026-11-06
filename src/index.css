@@ -1,0 +1,64 @@
+@import "tailwindcss";
+
+@theme {
+  --color-obsidian: #08090D;
+  --color-charcoal: #11131B;
+  --color-surface: #151721;
+  --color-surface-hover: #1E212E;
+  --color-surface-active: #252837;
+  --color-champagne: #E5C07B;
+  --color-champagne-light: #F3DC9E;
+  --color-champagne-dark: #C69F54;
+  --color-champagne-muted: rgba(229, 192, 123, 0.15);
+  --color-muted: #9295A5;
+  --color-subtle: #56596A;
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+  --color-border-champagne: rgba(229, 192, 123, 0.25);
+  
+  --font-serif: "Cinzel", "Cormorant Garamond", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+  --font-sans: "Plus Jakarta Sans", system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  color-scheme: dark;
+  font-family: var(--font-sans);
+  background-color: #08090D;
+  color: #FFFFFF;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #08090D;
+}
+::-webkit-scrollbar-thumb {
+  background: #252837;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E5C07B;
+}
+
+/* Caret color */
+input, textarea {
+  caret-color: #E5C07B;
+}
+
+/* Fix browser autofill dark styling */
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #FFFFFF;
+  -webkit-box-shadow: 0 0 0px 1000px #151721 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Accessible focus ring */
+:focus-visible {
+  outline: 2px solid #E5C07B;
+  outline-offset: 2px;
+}
