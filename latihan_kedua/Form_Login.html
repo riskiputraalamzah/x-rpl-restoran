@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AKU IKI SOPO?</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #a60d97dc, #20024a);
+            background-size: 400% 400%;
+            animation: gradinrtBG 15s ease infinite;
+        }
+
+        @keyframes gradientsBG { 
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { backgrond-position: 0% 50%; }
+        }
+
+        .login-box {
+            background: rgba(30, 37, 37, 0.292);
+            padding: 40px 60px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 50px 40px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            max-width: 380px;
+            width: 100%; 
+            color: #fff7f7;
+        }
+
+        .login-box h2 {
+            text-align: center;
+            font-weight: 8;
+            margin-bottom: 30px;
+        }
+
+        .login-box .input-group {
+            position: relative;
+            margin-bottom: 25px;
+        }
+
+        .login-box .input-group input {
+            width: 100%;
+            padding: 10px 15px;
+            background: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+            outline: none;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        .login-box .input-group label {
+            position: absolute;
+            top: 50%;
+            left: 15px;
+            transform: translateY(-50%);
+            color: #fff;
+            pointer-events: none;
+            transition: 0.3s;
+        }
+
+        .login-box .input-group input:focus + label,
+        .login-box .input-group input:not(:placeholder-shown) + label {
+            top: 0px;
+            left: 15px;
+            font-size: 12px;
+            padding: 2px 5px;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.5);
+            padding: 3px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            background: #ab0d91;
+            color: #fff;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+
+        .login-box button:hover {
+            background: #200a4a;
+        }
+
+        .login-box .links {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        .login-box .links a {
+            color: #ab8585;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .login-box .links a:hover {
+            color: #c53f33;
+        }
+
+    </style>
+
+</head>
+<body>
+    <form method="POST" action="Proses.php"></form>
+    <div class="login-box">
+      <h2>PTIXchange</h2>
+      <form action="connect.php" method="post">
+        <div class="input-group">
+            <input type="text" id="username" name="id" placeholder=" ">
+            <label for="username">Username</label>
+        </div>
+        <div class="input-group">
+            <input type="password" id="password" name="password" placeholder=" ">
+            <label for="password">Password</label>
+        </div>
+        <a href="web.html"><button type="submit">Masuk</button></a>
+        <div class="links">
+            <p>Lupa Password? <a href="isilinknya">Klik di sini</a></p>
+        </div>
+      </form>
+    <div>
+</body>
+</html>
